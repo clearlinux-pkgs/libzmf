@@ -1,0 +1,27 @@
+libzmf-0.0.2
+
+- Allow build with boost older than 1.56.
+- Require C++11 for build.
+- Fix various issues found by oss-fuzz.
+- Minor code cleanups.
+
+libzmf-0.0.1
+
+- Handle ellipse rotation.
+- Add support for tables.
+- Add support for text.
+- Handle arc rotation.
+- Add support for polygons / stars.
+- Handle dashed pens.
+- Add support for bitmaps.
+- Add support for import of images in the Zoner Bitmap Image format
+  (.bmi).
+- Handle bitmap fills.
+- Add support for arrows.
+- Detect Zoner Zebra files (nothing is imported yet).
+- Fix crashes found with the help of american-fuzzy-lop.
+- Many other smaller fixes and improvements.
+
+libzmf-0.0.0
+
+- Initial support for Zoner Draw 4-5.

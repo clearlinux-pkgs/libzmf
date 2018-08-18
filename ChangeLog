@@ -1,0 +1,1243 @@
+2017-09-14  David Tardon  <dtardon@redhat.com>  [130184de11251be77cf4030bca0b510f69bd2dc0]
+
+	make the condition a bit easier to read
+
+	Change-Id: I94f84e3bb77f8871a31580a5cd009a8193b81658
+
+2017-09-13  David Tardon  <dtardon@redhat.com>  [344e055e624ce4cb3b688262c550099a3327aef8]
+
+	use subtraction and division in check to avoid overflows
+
+	Change-Id: I503124716b488ab92bb7980ea1c711e8ef770bce
+
+2017-09-13  David Tardon  <dtardon@redhat.com>  [665fe1c98a9d96c5cf223ed8cccc2cdb175e4461]
+
+	cid#1354067 rewrite to appease coverity
+
+	Change-Id: I98da4522147906beb9401217704234d0c016835f
+
+2017-09-12  David Tardon  <dtardon@redhat.com>  [bea72558805b78dfe4e8bbc00d3650b183a8830e]
+
+	prepare for a release
+
+	Change-Id: I5cc05ceefae714d8b7bdde55669ba9a29a20b080
+
+2017-09-11  David Tardon  <dtardon@redhat.com>  [d563f1b1201e72abcf45f3c48d6ced1711ef7d70]
+
+	WaE: declaration of 'points' shadows a member of 'this'
+
+	Change-Id: I1f01cfe0cd6c3406830f45ef8b1b5ddf1ef75feb
+
+2017-09-11  David Tardon  <dtardon@redhat.com>  [41e6cae5b0a80d09997bf90e9b948a8757257b04]
+
+	WaE: declaration of 'header' shadows a member of 'this'
+
+	Change-Id: I9b67601c2e6f8f574fef44b3529e53dec82516a6
+
+2017-09-10  Miklos Vajna  <vmiklos@collabora.co.uk>  [2e72b06d7e0cd5a316aa2198246676b97480922b]
+
+	m4: MSVC defines __cplusplus as 199711L still
+
+	See e.g.
+	<https://stackoverflow.com/questions/37503029/cplusplus-is-equal-to-199711-in-msvc-does-it-support-c11>,
+	on MSVC we can't depend on the value of __cplusplus, since that one is a
+	too low value, even if everything else works fine.
+
+2017-09-08  David Tardon  <dtardon@redhat.com>  [bfc20028e143ae7427f2704344d9f3ed8c7d6852]
+
+	tests need librevenge-stream too
+
+	Change-Id: Id8e8fa81ac82cc0be11593f0ee954b509e8b650b
+
+2017-09-08  David Tardon  <dtardon@redhat.com>  [7f72c153f370dcdf83388fa7ce1ef5ff9d8b4570]
+
+	assume modern enough ICU is available
+
+	The separate .pc files already exist in 46.0, possibly even in older
+	versions.
+
+	Change-Id: Ib5ae67b02dd577655fdab297219f2ffa9b69a798
+
+2017-08-15  Thorsten Behrens  <Thorsten.Behrens@CIB.de>  [6be6f4b385323df34864a4c77586ad36487a1d31]
+
+	Fix spelling
+
+	Change-Id: Iaddcde92abf1f53c4916e88f2b53dd0ecba5382e
+
+2017-07-29  David Tardon  <dtardon@redhat.com>  [cc3cefe7ef23928d0b93ae73a67f38c196d15e5d]
+
+	supress GCC 7 fallthrough warning
+
+	Change-Id: I2fc3d232ca8a7c430604cb44b015d1dc881cba71
+
+2017-07-29  David Tardon  <dtardon@redhat.com>  [9170b3700cbd2f894dd0d9907e680d9cd3e1c2ad]
+
+	do not insert UTF-8 string by code units
+
+	Change-Id: I91fd9691900c9ade92ad60983c90fba994c7cf30
+
+2017-07-07  David Tardon  <dtardon@redhat.com>  [3c5d7cfe0e31bf77b5e3fd40e05c1e692a289545]
+
+	drop unused internal stream impl.
+
+	Change-Id: Ib9b1a33cbad078e55cad711a5cbdbdbeade54583
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [9b8c5318db81db5e26fb1e82343698f33067d755]
+
+	change include guard to match file name
+
+	Change-Id: I5c5de099d149298da31c36cb64bfcb1d7f76db95
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [10e502b529a0d50e111d4653823a81dce6d1f6c8]
+
+	mark unimplemented functions as deleted
+
+	Change-Id: I6139f3990d64e6077ae20907f780efc31c347ad4
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [59bb448ea86987d77281608e2c76cf04bcb03916]
+
+	mark virtual functions with override
+
+	Change-Id: Ic1b5da52d3bcfd92ce0e262281d60268e0e22e0d
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [a5e303b7e0d94a8d1c10c8a6977c35147e55ee12]
+
+	update C++11 checks
+
+	Change-Id: I1769ddc906140bd0595fb961bff0c48cb4c2278f
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [97b79982cff50c29a8d14a97dfe4316177e3309d]
+
+	replace dumb pointers by smart ones
+
+	Change-Id: I17c0b4aca09ea53ffa5d4ff6222060b516ca6bdf
+
+2017-04-21  David Tardon  <dtardon@redhat.com>  [cc1e8888f14e4c7bc6c46b18b8e458e25176b6b0]
+
+	ofz#1195 speed up normalization of angle
+
+	Change-Id: I5b081bc7ee79afcd3ad63003d1169ddefe83e4d7
+
+2017-04-21  David Tardon  <dtardon@redhat.com>  [0dac28e590c2cefacf6a5a7186eaa51470f4bc11]
+
+	avoid manual resource management
+
+	Change-Id: Id9d8c0c0efa53a1cb76dc043d9161fd1bcf05ce6
+
+2017-04-15  David Tardon  <dtardon@redhat.com>  [bf4f4512168501b55b6ed7dff49a48642a7a9e9b]
+
+	ofz#1006 skip bitmap if it could not be read
+
+	Change-Id: Iffd3456c51caa92815cdcc6f7ccf4a69d3f9f8db
+
+2017-04-12  David Tardon  <dtardon@redhat.com>  [72893e0929e16c3e766fae45e4d20d0cb9e3ba96]
+
+	ofz#1030 try to repair bitmap dims in damaged file
+
+	... if the bitmap has transparency.
+
+	Change-Id: If2e5128f04653e5b1a49e194e374924299db23ea
+
+2017-04-12  David Tardon  <dtardon@redhat.com>  [fc8195a3acc100822fbffe818aa9d23e3a3089bb]
+
+	refactor bitmap parser
+
+	Change-Id: I54b94cc72a4aaa8a70568cc14427e39d44dca3eb
+
+2017-04-12  David Tardon  <dtardon@redhat.com>  [97de75421f07c472cacfb9dda3ae2dafaab59212]
+
+	put PNG writer to a separate namespace
+
+	Change-Id: Ie0c4a561c5ec4be7e2c550d0645c2a8738b2c492
+
+2017-04-10  David Tardon  <dtardon@redhat.com>  [df5d76f0e538bef9e68bf3377d965fab55a12089]
+
+	ofz#1073 avoid inf loop with too big angle
+
+	Change-Id: I5af806486d02296d6d55851afa7329ca2b8ec97e
+
+2017-04-05  David Tardon  <dtardon@redhat.com>  [a518a331a4335aa818efdd6fc5258fc8ff0703c3]
+
+	make the condition easier to understand (for me .-)
+
+	Change-Id: I172bf51376ea79ed19687ebda932ec2cd80e9f0d
+
+2017-04-05  David Tardon  <dtardon@redhat.com>  [5d44a5b8f44ef3c47bf0d21aab9fc73b451be05f]
+
+	ofz#988 sanitize color depth
+
+	Change-Id: I8b2a70e7ee3fbaf853e40b67683db588b026be74
+
+2017-04-05  David Tardon  <dtardon@redhat.com>  [4b761a9b4296d24eb95c0f302995b0435c17dd86]
+
+	simplify this
+
+	Change-Id: I04d5dd4856d4496e2538bfdc3dd456d17d3e00cd
+
+2017-04-05  David Tardon  <dtardon@redhat.com>  [3fcae08b7367f10649f2eef25a530db39c1233be]
+
+	ofz#1007 ensure font name ends with 0
+
+	Change-Id: I77e72d3dd81affaf1bc4a565fd4280d7ca200cd2
+
+2017-04-05  David Tardon  <dtardon@redhat.com>  [22a5eff6b62d10937793fc3c95bc10dcdf0faa05]
+
+	drop unneeded braces
+
+	Change-Id: I17b18cc5a56dbd1dd05834d8c4b6fd0223a95627
+
+2017-04-05  David Tardon  <dtardon@redhat.com>  [14c60f7f029855639de6b6da12a9c3b55dff2674]
+
+	do not fall through
+
+	This is harmless, though, as lines always contain both start and end
+	arrow.
+
+	Change-Id: I3bcf955835e80e6d61338d40343038f1e6a014e9
+
+2017-04-05  David Tardon  <dtardon@redhat.com>  [d1e7c8bedee76fde3947dc86644df640b2815745]
+
+	WaE: fall-through is intended here
+
+	Change-Id: I233192ec85cf0ad2158f953d9e188f0d178190ee
+
+2017-04-01  David Tardon  <dtardon@redhat.com>  [197862b3b43eba1ca91698a98b0391d0c9ed84d8]
+
+	avoid enormous allocation
+
+	Change-Id: I16abb5a820f6ca622575f0e19671f97543be902f
+
+2017-04-01  David Tardon  <dtardon@redhat.com>  [6f4d75430dc023c53d5d69946b4cb4fd8ee8ddd7]
+
+	fix handling of inflate error
+
+	Change-Id: I0034a152ee96bb81ec15f77a12d902ae04fe4545
+
+2017-03-31  David Tardon  <dtardon@redhat.com>  [9fe46f17a08781974d73a41c9a58f65856f099f7]
+
+	add fuzzer for bitmaps too
+
+	Change-Id: I341f6adf5d43d347cdfaecdc5d05fe3ccaaa13c3
+
+2017-03-31  David Tardon  <dtardon@redhat.com>  [60662664fc57d059a075d0dc8a6ee8b73acd9cf8]
+
+	add fuzzing driver for oss-fuzz
+
+	Change-Id: I7fee4b2bb49930c94d5f449f381c40c3b9b648d0
+
+2017-03-14  dennisroczek  <dennisroczek@libreoffice.org>  [67671765e9eccc7c591abc708fb3c2789921637e]
+
+	fix typo: "the the" --> the
+
+	Change-Id: Id44d0553bf8868c3d6436db454379613b7a891f6
+
+2017-03-09  dennisroczek  <dennisroczek@libreoffice.org>  [e1a5d6642878b9a01cae1ebe69c71e29ea00914f]
+
+	fix typo: usefull --> useful
+
+	Change-Id: I921598581b9625d81e9aeaf887b341ff32434ca6
+
+2016-10-23  David Tardon  <dtardon@redhat.com>  [11b8d5b0c8c0461ac638aba6bc6e59e7ec5d815c]
+
+	allow build with boost < 1.56, part II
+
+	Change-Id: I4421847b1aa7bbb006a32dd85567b96125df6b6b
+
+2016-10-23  David Tardon  <dtardon@redhat.com>  [16d921505a56745f671525310ebb4b3c58b35afe]
+
+	allow build with boost < 1.56
+
+	Change-Id: I81a110fc19e1540980a265c773bd840c47643d86
+
+2016-09-07  David Tardon  <dtardon@redhat.com>  [57be949c2e4b9a59c7488d8921c54f993f7fe70b]
+
+	fix file name
+
+	Change-Id: I4fb8dee4e893ebd6e7bcf332a1fe800c4cd74f3a
+
+2016-09-07  David Tardon  <dtardon@redhat.com>  [7366678dccbc1d4f852613d98506d05d9843f837]
+
+	prepare for a release
+
+	Change-Id: I07fa01951b37e5b12559d22a6c99b7289a0c71f5
+
+2016-08-17  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [fa1ddca25c846ca31de5ccd116e079a29c3349c0]
+
+	remove unneeded quadrant test cases
+
+
+2016-08-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [b60b79a5b5a00ad87fc4cb2c700baa21b02211fd]
+
+	stars, rotate after mirroring
+
+
+2016-08-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [3785858a1c99c2bd2aa4d369018cd0344269074c]
+
+	calculate quadrants using non-rotated points
+
+
+2016-08-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [0e5c80d36bdd0c5c34f3aa84db0aacba2eba24df]
+
+	initially mirror stars vertically
+
+
+2016-08-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [c1ef97f28304371262ec8759dfc0df976869550e]
+
+	mirroring
+
+	not completely working and rotation is broken
+2016-08-12  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [8ff9d39bc9dc1d2876408861637ef788e7ae1a01]
+
+	add input checks to avoid crash
+
+
+2016-08-09  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [08a628fe34a6b11d15fd6dd61e7b21f192736811]
+
+	don't allow multiple BMIHeader::load calls
+
+
+2016-08-09  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [381312d02844fc774c8007517d8355bac87ad0ab]
+
+	add input check to avoid crash
+
+
+2016-08-09  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [3fab693afa699a89068d934a1395ace865a35ee8]
+
+	probably don't need to check palette flag, just read palette when < 24 bit
+
+
+2016-08-07  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [8eeb7067dadd2828dfb674b4281cec51ffb7c57a]
+
+	bbox quadrants
+
+
+2016-08-07  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [ce10dee31fdef232f350d9d07a52c059dbe6903e]
+
+	cache bbox center
+
+
+2016-08-07  David Tardon  <dtardon@redhat.com>  [80279cd315529a4ef0b2baedb9d9e617fb793bf8]
+
+	fix seek from the end of a stream
+
+	Change-Id: I83de7f139cb4ce9917b34b5b818f217c9a634017
+
+2016-08-07  David Tardon  <dtardon@redhat.com>  [ab89824197cd0233d65bd76a886552396b85e82a]
+
+	swallow exceptions during format detection
+
+	... they almost certainly mean the input is in an unsupported format,
+	which is the only thing we're interested in there.
+
+	Change-Id: I70644a2f007ddcd367edb3a6083fd8f4d83ad655
+
+2016-08-05  David Tardon  <dtardon@redhat.com>  [32b060e7826b2eb412bb033ff17c2581df784e11]
+
+	WaE: private field 'm_output' is not used
+
+	Change-Id: Ifc77ad29232414fec5cd9c5c6c8f5248eb541fcb
+
+2016-08-05  David Tardon  <dtardon@redhat.com>  [ad6e4db9262103b3cdc94f96f5865bebc0f1e2f5]
+
+	WaE: moving a local object in a return statement prevents copy elision
+
+	Change-Id: I33a75e6e2cdf98fec6ee2054e8d45e6a823f0c9b
+
+2016-08-05  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [bab3717d02b4d4ac389625c5b7a38bb91fa199d1]
+
+	set image fill tile size and position
+
+
+2016-08-02  David Tardon  <dtardon@redhat.com>  [8c1b3a85a5c307084db5200efad6ada6e4833a2b]
+
+	drop pointless local var
+
+	Change-Id: I38dff1c184865c242959dc66407d88afea796022
+
+2016-08-02  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [4c03a1b5f2c5490f16e2ab90c7feaf57efed93aa]
+
+	fix polygon size
+
+
+2016-08-02  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [5aa2df4799ad7a93c6b31d849757cf122ebe4b58]
+
+	polygon initial rotation not needed
+
+
+2016-08-02  David Tardon  <dtardon@redhat.com>  [f4eceaad467e734c1d542d0698115e45c7b414b7]
+
+	draw sides of polygon correctly
+
+	It is specified in polar coordinates, not cartesian, as we thought
+	initially...
+
+	Change-Id: Ib9fb1ef1f90ebcedba5923be46c76efaa726aac9
+
+2016-08-01  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [002f4e20a19420470a025832a381ea750c178487]
+
+	add polygon initial rotation
+
+
+2016-08-01  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [e1a281010eaca56a1401d517d8fd1d3d7ebcf005]
+
+	remove unneeded polygon move
+
+
+2016-08-01  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [b8e47a4e57207b180ed193286135f2bfd44968d2]
+
+	don't repeat first/last point of polygon peaks
+
+
+2016-07-31  David Tardon  <dtardon@redhat.com>  [b32f786634083f86512a5d403c1a2a030024be14]
+
+	fix destruction of PNG info struct
+
+	Change-Id: I588d655b6fa550ca719bdbebee7f1c9640713ced
+
+2016-07-31  David Tardon  <dtardon@redhat.com>  [485fb9e60226eebfcd37623beec351c1c6b298e3]
+
+	disable opts in debug build
+
+	Change-Id: Iadc962fc4f4a08957c04855329e6589509778c49
+
+2016-07-31  David Tardon  <dtardon@redhat.com>  [b7284e60b04c1e70ebcfb8fbee5a353fc5435d8e]
+
+	make the code more c++-like
+
+	Change-Id: Ie395f3e6af663902caddec1e6c42760d1fdd82a2
+
+2016-07-31  David Tardon  <dtardon@redhat.com>  [c08fc500c3f7f92cdd560912efd2ba0b2caf428d]
+
+	sort headers
+
+	Change-Id: I285f4b2361dce5362196971607e51c0993060fc2
+
+2016-07-31  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [d7ef8c4d36db41f317530351b6a5bcbd8bb3878a]
+
+	png callbacks extern c
+
+
+2016-07-31  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [206ddf063451fab3a9164a70145cff3b87b1d295]
+
+	pngWriteCallback catch exceptions
+
+
+2016-07-30  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [0ea58eaed3249d08c896b4992cd49a628e89431c]
+
+	rename Bitmap to Image
+
+
+2016-07-30  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [399612833dcf37e22fc04a7fda4292a1ae3921cf]
+
+	use png instead of bmp for bmi output
+
+
+2016-07-30  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [80c006824d3c5f220acb01b52bc6cc531a375147]
+
+	add libpng
+
+
+2016-07-29  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [2e46e09df378e862070e5fe47cfc029c0efe6537]
+
+	remove c-style cast
+
+
+2016-07-28  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [5a325e08d67c0c06ce3c16324fed829aeec135d2]
+
+	add bmi transparency support
+
+	doesn't work, need to use bmp v.4+
+2016-07-28  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [5b435384cfe478f156ecfc3190da382df17fdab4]
+
+	add bmi 1, 4, 8 bit support
+
+
+2016-07-27  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [4bfe4b35b7a0d90ddbf8e23914177773c5635da2]
+
+	refactor bmi parser, add color palette reading
+
+
+2016-07-27  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [80ccf0d0023fb2bdee6c937be5bf0c9d50a9079c]
+
+	use erase + unique instead of checking before insert
+
+
+2016-07-27  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [6eaf6797c377988e30fa19bd686d45bcd0b436e6]
+
+	fix past the end access
+
+
+2016-07-27  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [6255efc25c227227ca2faccf3082042c44b8775e]
+
+	read whole bmi header, offsets
+
+
+2016-07-25  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [413ccbab111e8708621d8fac85bf60917ea430ac]
+
+	move arrows to the viewbox center
+
+	still doesn't work in odf
+2016-07-25  David Tardon  <dtardon@redhat.com>  [0ca7963513a792370561d7bfe55c36ccff57f1b1]
+
+	do not duplicate style props in shapes
+
+	Change-Id: I930ddf083800b046b6ed2e5de294f5e56ea07e5b
+
+2016-07-24  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [1729e282e79832d4d6900fd95de1b07dd4abe902]
+
+	fix arrow coordinate transformations
+
+	still wrong position in odf
+2016-07-23  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [7678fea60a7714084932de7c4c2a4a385862aa01]
+
+	read arrow line end
+
+
+2016-07-22  David Tardon  <dtardon@redhat.com>  [a30b2c2b2e6680e101f59110c946456b45de85a9]
+
+	properly relink lib on changes
+
+	Change-Id: I7efd373ea270f0a4d712c3c2cd1d0d36c3db48a6
+
+2016-07-22  David Tardon  <dtardon@redhat.com>  [38c880b03c8abadfe820193f18aa5b391af6a2c2]
+
+	drop superfluous semicolon
+
+	Change-Id: I355fec614faede42d5b1e0c9f8744dc6e3a117c1
+
+2016-07-22  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [e841ab746f81d24d16aa1345407745474eebf714]
+
+	arrows BIPU
+
+
+2016-07-22  David Tardon  <dtardon@redhat.com>  [88eecf6de0b93435840c1d772680ae7a4d0b88d7]
+
+	um2in conv. is needed for all the drawing formats
+
+	Change-Id: I78afb20381dc230517ec336d1118322533cab92f
+
+2016-07-22  David Tardon  <dtardon@redhat.com>  [46b6ac6d4e7af0d2af0841cb8a58ceb1d3389fb8]
+
+	add BIPU support for Zebra documents
+
+	Change-Id: Id0eec064e6658d1aafcc8f56b90aff422c66827f
+
+2016-07-22  David Tardon  <dtardon@redhat.com>  [7d670c9b2ebf0b040d975e23aab9ff9fa7e8898f]
+
+	refactor format detection
+
+	Change-Id: I5872c8cb6c3db7762825dedd2dddf9ec9c841914
+
+2016-07-22  David Tardon  <dtardon@redhat.com>  [4b11871cacb4dc01c68056902dd6e4e2c4639561]
+
+	add a basic ZMFInternalStream test
+
+	Change-Id: Idc76e8cc77a5443d0511af58fa9bdc6515377c63
+
+2016-07-22  David Tardon  <dtardon@redhat.com>  [c95b0a635d300d286b7ef51cd392bdee4ca4a204]
+
+	add test for format detection
+
+	Change-Id: I228be506748488fb7b3e04333d0d776729e9a945
+
+2016-07-22  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [d76a7ffa74ff63db2173a8d02d373e3c96a53361]
+
+	fix um2in
+
+
+2016-07-21  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [6a125168eefbab3c0da4f5df9040e459c3ee3820]
+
+	move path writing to separate function
+
+
+2016-07-21  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [aecb3194c61e8b8d28f659d3a8440cdd906891c3]
+
+	writeBorder skip if invisible
+
+
+2016-07-21  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [c3ae8d15cfc6e0610cf0368b6ed60a2baa8eb6a0]
+
+	move curve components reading to separate function
+
+
+2016-07-19  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [f65024e9a9d31047377634492b0bb5837a4f1c93]
+
+	image transparency
+
+	doesn't work, probably not implemented in generators
+2016-07-19  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [d59ef0a86bfec0ea1cb5e1e6e38c424ce6fe763c]
+
+	remove unneeded debug message
+
+	can contain other refs besides style
+2016-07-19  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [dd363d130f1e9769e99af81eb26a194cf6aa7403]
+
+	bitmap fill transparency
+
+
+2016-07-19  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [05336cbc46176a351ba658a4d90b915e502d2961]
+
+	image style
+
+
+2016-07-18  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [17127eddbf62c10463848fc733413dfb39cc1bc4]
+
+	bitmap fill
+
+
+2016-07-18  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [8e42e87a4ed624ce3fdc335e03830215c3e34cba]
+
+	24 bit bmi parsing
+
+
+2016-07-17  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [931d65580820a6b788f2968c6f99b111128a5329]
+
+	zmf image parsing
+
+
+2016-07-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [cd1e6bd4e25850833f97d465c03d7c22dbf8ef3b]
+
+	support bmi output
+
+
+2016-07-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [e79e0a71338f5c7fdf6f6f636accec141b8f0dc5]
+
+	bmi parser doc output
+
+
+2016-07-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [6ec5aa9f6a2343fc50ea8f51a8c41de45004cc89]
+
+	collectImage
+
+
+2016-07-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [cf3f12ac40c12d5e2612b7bc331a0da7dc04ae6f]
+
+	parser probably doesn't need collector in ctor
+
+
+2016-07-15  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [0f526476609aeec59eeeb24556dd639ac4c96db0]
+
+	zmf bitmap handling
+
+
+2016-07-15  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [31b8f4ab0e1367c32452e4551edcd0a318378609]
+
+	bmi header
+
+
+2016-07-15  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [79bb2871e9288fc45fd988f0cb09512421ea1dcb]
+
+	rename to readPreviewBitmap
+
+
+2016-07-15  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [f7a33c09610b520e01e3da2c9282f6d1a2d72da0]
+
+	add zlib
+
+
+2016-07-14  David Tardon  <dtardon@redhat.com>  [ba72279a15ee76916a24f0b947ad5e260b13e93a]
+
+	draw both complete star and sides
+
+	Change-Id: Ib97115fa2507e3b87a560a402b59c7e2cc4573b2
+
+2016-07-14  David Tardon  <dtardon@redhat.com>  [2d5035b102a222ff166abd8203ffbaa901c94f75]
+
+	update drawing of stars
+
+	Still does not work correctly, though.
+
+	Change-Id: Ie5f1a9294c038d8f8d2768387f0e76b114273bbf
+
+2016-07-13  David Tardon  <dtardon@redhat.com>  [804df0f297782c787cdf95d8e26c00ec00b19edc]
+
+	full norm. is only needed for vals read from input
+
+	Change-Id: I3e8ca6bb7633f7d109400e702b7e1fee6a1ac210
+
+2016-07-13  David Tardon  <dtardon@redhat.com>  [67ebfb794bbe65d8587e37f9c9be01a739ec2972]
+
+	add missing header for std::accumulate
+
+	Change-Id: Ie665afc6e1774c3851e8ba75e1b00b3cf8cc1089
+
+2016-07-13  David Tardon  <dtardon@redhat.com>  [72c269348e3858fa130bfb670ee7366c2af4d8e6]
+
+	save a few lines
+
+	Change-Id: Id84a456488eb5b4510e2e4a5e80e5493711c4574
+
+2016-07-12  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [18153afdcb80dda833bcdeb17ff1f19fef212c2a]
+
+	dashed pen
+
+
+2016-07-11  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [a4ede219d6c28b88548b7b1a00d72069450e23a6]
+
+	polygons/stars parsing
+
+	output doesn't work yet
+2016-07-08  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [defa2006aabc1bc0bbbd669bcd1b8d54a5d963ec]
+
+	refactor curve parsing to avoid code duplication (polygons, ...)
+
+
+2016-07-08  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [d71b9f53fe306aca0ebb2da940e1da952099ed37]
+
+	arc rotation
+
+
+2016-07-08  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [098a931fdaad363efcdcf968f1efd77bf76ca17d]
+
+	point rotate function
+
+
+2016-07-07  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [1bc08534ea1ba3aacff43cc1606781249bcc5801]
+
+	angle utils
+
+
+2016-07-07  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [5c4b0ba2518f04259ea725f93ca46eacfe6741d8]
+
+	refactor bbox, fix width, height
+
+
+2016-07-07  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [df975bd56d09e0136dc60d7a10b0b4bce3542b97]
+
+	move point distance function to be available everywhere
+
+
+2016-07-07  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [21d08727d307dad7abcc87431cb94d3d0940b77e]
+
+	text rotation
+
+
+2016-07-06  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [f5d9d31c29943df4fbc1fedc48a339e05e519692]
+
+	text handle spaces, newlines
+
+
+2016-07-06  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [64161484691b5943d75a4101e01b2545154d4aa7]
+
+	table cell align middle
+
+
+2016-07-05  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [2571fdf1c7f268cee10d519180e595783606e80d]
+
+	text vertical alignment
+
+
+2016-07-05  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [e302cd10ef8621c0e9d2f4334f2c3643463a10dd]
+
+	text alignment
+
+
+2016-07-04  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [0391c78e5b6b3acc6458ff37413dc8f8f333c773]
+
+	table text
+
+
+2016-07-04  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [eac903217d4332f16ad6fb6c7ed08965420d95a7]
+
+	put default styles into map instead of conditions
+
+
+2016-07-04  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [55b512a7b0d0633ad0f64ffb6ea15209e3c50c48]
+
+	simple text
+
+
+2016-07-03  David Tardon  <dtardon@redhat.com>  [7f6054e6b18b908b91ea8ba4d8500b0854fb4a48]
+
+	use existing constants
+
+	Change-Id: I7923a86a805d9427730bf7b02c1323c30d86285b
+
+2016-07-03  David Tardon  <dtardon@redhat.com>  [bb80cbce2a39e1008f799988173c6e47f7eb2a71]
+
+	allow to build without conversion tools
+
+	Change-Id: I0a3af6e2fedf608039284d1a204e0d02c0b18f7b
+
+2016-07-03  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [bb5131a986809142090b3a96a5dbd0d0d1e437dd]
+
+	table borders
+
+
+2016-07-02  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [50d0e4ce7cc5beeb4feb69a48171a92d1910909a]
+
+	refactor ref objects retrieval, magic ids
+
+
+2016-07-01  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [d5a42f98fd4b22aa8b6aa6a0c5bc002f20b17af4]
+
+	table background color
+
+
+2016-07-01  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [0ea11aa20edcba8491e00320ee204441a064a4d7]
+
+	add ICU lib
+
+
+2016-06-30  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [234ccbe09b0bbe9bfdfbf1b54bb5452896968cda]
+
+	table cells, size, background color
+
+
+2016-06-30  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [03c90a42f4fb601cedfaa2959f95bc2c621b334c]
+
+	Point.move
+
+
+2016-06-30  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [16a35fffb6aad56095c8e7d85c53e1c2fe546a63]
+
+	refactor ref objects retrieval
+
+
+2016-06-30  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [b5d37f81e8b04e7ff449f459e6f5c7e2086a43d1]
+
+	centerPoint function
+
+
+2016-06-29  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [9d868c4587fbb88fbb350810b48a582acdee7e02]
+
+	--enable-debug-draw-bbox
+
+
+2016-06-24  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [4d41b0b712747115c2c9534e9427c7c06ced8f9f]
+
+	skip first empty page
+
+
+2016-06-23  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [0a1ce416cf996306260bbd974fa6f2be37dc574b]
+
+	rename master page object to guidelines
+
+
+2016-06-23  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [76169f6fe4501c42375525f742d919f7c2555e0f]
+
+	ellipse rotation
+
+
+2016-06-22  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [2a3ea09303cf1310072fe3f74b0390d44441b429]
+
+	use diagonal instead of top left point to calculate ellipse center
+
+
+2016-06-22  David Tardon  <dtardon@redhat.com>  [ee5caa95fa3cbd335bd4292db7dc639fc282ebcd]
+
+	bump release
+
+	Change-Id: I6c6492b1210caad392b7e5e7fd171c2aa8085b70
+
+2016-06-22  David Tardon  <dtardon@redhat.com>  [0eb9d3fe1b11fe1021712e22535184dd453d0eed]
+
+	write minimal news entry
+
+	Change-Id: Iebf81f89b93793502cd5b14effeef6bbc396a4b9
+
+2016-06-22  David Tardon  <dtardon@redhat.com>  [7ca7d212dc5bcd624bf81be584865affeaeff74c]
+
+	fix README
+
+	Change-Id: I5a8fe44c4888fca6142f55f1826cde660bf4d670
+
+2016-06-21  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [e1d526886ddbbd9fa62f559080fbb70f48827faa]
+
+	square linecap
+
+
+2016-06-21  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [e969c366561602d32195fedfb037fce0881f3d10]
+
+	linecaps, linejoins
+
+
+2016-06-20  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [5eccfddd98402d55ebae23d5f785ab09b65ce985]
+
+	use word curve instead of polyline
+
+
+2016-06-20  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [33505bf5938f16dadab5d7894188dbcd053e6040]
+
+	combined curves
+
+
+2016-06-20  David Tardon  <dtardon@redhat.com>  [bea22edd6772253ca2b87630222ebd6002c05aec]
+
+	add skel. support for bitmaps
+
+	Change-Id: I271ed89de877d6a68bbf0b63060f70b2c32dbe0b
+
+2016-06-20  David Tardon  <dtardon@redhat.com>  [7b88860eb6940d8e40afcd1e531e296477aaee54]
+
+	add missing include
+
+	Change-Id: I004d5e723af066d55d27770bcbfc82adb55e0bb7
+
+2016-06-20  David Tardon  <dtardon@redhat.com>  [5816b35e8d2642bc687c59c35110e5ae96c8b372]
+
+	change order of headers
+
+	Change-Id: I0d744dc7a8be2a607df3d0f5bab3b18889cb88b2
+
+2016-06-17  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [591e060506ef017e26094a1e1c19dfa448f03c63]
+
+	groups
+
+
+2016-06-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [c14e935f4e8f9443e41b97ff4b6f45f12a1f4bb6]
+
+	debug print object types and ids as hex
+
+
+2016-06-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [1165fad7a9c862b43fd936ab9d8c6aba40aa03ba]
+
+	shadows
+
+
+2016-06-16  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [ee4f6c4a43ee709fc760755515d8b11dda8e1f4e]
+
+	readS32, use signed ints when reading Point (offsets)
+
+
+2016-06-15  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [664edb1a715d620bf36752918b31c031c2255908]
+
+	don't fill not closed paths
+
+
+2016-06-15  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [06a2c26dbfad40214ac03cfcd342e60da3414ba5]
+
+	transparency
+
+
+2016-06-15  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [4378eabe366811c3e0cc3e2d1e71fba495fbd136]
+
+	radial gradient center
+
+
+2016-06-13  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [8e313484cc6cda890be7c1969f99af9a74403f5e]
+
+	closed polylines
+
+
+2016-06-13  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [1b0b446134717fda0c530f0363a2c34bf2ff3cd6]
+
+	gradient fill
+
+
+2016-06-12  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [508b959a6f37be8613024f800b88f4353d2b1ed6]
+
+	page color
+
+
+2016-06-11  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [2aa5388d9260ade13abdd8f51df66f462cf130c0]
+
+	skip all color palettes
+
+
+2016-06-09  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [3c1ca77d45aedbb4dd072edb34df82ee92b7c7e9]
+
+	avoid unsafe enum casts and unnecessary enums in parser
+
+
+2016-06-09  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [d3301879b4357b86796c689fa6f08bdce6594bf6]
+
+	solid pen, fill
+
+	Change-Id: I45f7a1186ae70b1d4778fab8fdf706687cbc7162
+
+2016-06-09  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [13a01e86a64d03dd325217c543f7dcabba400e95]
+
+	read full object header
+
+	Change-Id: Ia9df75b8f958b6c715d7f532dddc125e9e4ffa67
+
+2016-06-09  David Tardon  <dtardon@redhat.com>  [8e55f4f3425905e0df7037caec380990629d380c]
+
+	add check for math constants header
+
+	Change-Id: Icb4debac6302c2b7b22b16da014f8b702951cdd4
+
+2016-06-09  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [7f7c2a9b3a47424a416d02aa60a875241ddaea64]
+
+	arcs
+
+	Change-Id: I99ca9162489f8676dbde86f5dfe4b050e13d6601
+
+2016-06-06  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [c2cf29c820dc17a82d33823299617cd5d4909a09]
+
+	use lambda and auto to improve code readability
+
+	Change-Id: I24c8a8059c7c877bf3bea22b1157235efd300e6c
+
+2016-06-03  David Tardon  <dtardon@redhat.com>  [c3ce85dc616a066c92faf3f13ef4472040834998]
+
+	drop static tools
+
+	Change-Id: Iaedbcc3e4e9e158be53c7f4a6727244fa978a020
+
+2016-06-03  David Tardon  <dtardon@redhat.com>  [ba5a9e8e59307a58bd92c73e52ef8b5f2adb5280]
+
+	drop VERBOSE_DEBUG
+
+	Change-Id: I277c63d7858a46cd4257ca72d8dcc55e24f343e6
+
+2016-06-03  David Tardon  <dtardon@redhat.com>  [e2186acc5673b85817e61fca99219b8dcbda3654]
+
+	print debug msgs to stderr
+
+	Change-Id: Ife6ab4d42d40989dd59adfad62fa8840b1084ae3
+
+2016-06-03  David Tardon  <dtardon@redhat.com>  [ddb11272424502c3d180158da19eb846afbe9515]
+
+	replace redef. of int types by boost
+
+	Change-Id: Ife8a6f378c45ab620c8a41a3f2f94dc62371f9d9
+
+2016-06-03  David Tardon  <dtardon@redhat.com>  [bdfc06b3c1a5e3a745250179e8250d6b34c0bee4]
+
+	astyle
+
+	Change-Id: Ie142d01c26197c0491637dc516a0db55179113a1
+
+2016-06-03  David Tardon  <dtardon@redhat.com>  [c1188053d5de373828180df81f8688929a5bccea]
+
+	boost::shared_ptr -> std::shared_ptr
+
+	Change-Id: I4d350d6281da64d0923287179ad926b1518cfffe
+
+2016-06-03  David Tardon  <dtardon@redhat.com>  [30b12f99225570b096b259d03f2a354dba257d74]
+
+	switch to C++11
+
+	Change-Id: I6a877418b8147259ae0b08a2ab473740be45aa36
+
+2016-06-03  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [5c45bd5f40e7491bce828d8e3afdf1fba99c765d]
+
+	simple ellipses
+
+	Change-Id: Ia09f49ceae988d516b13a28838baecda01555003
+
+2016-06-03  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [7841147cbe58ddc5494df3f158136a088a9e9762]
+
+	pageX/Y helper functions
+
+	Change-Id: I617cebf46862cae9befead94cba158ce2173ad85
+
+2016-06-03  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [bcbfdf36ef0b0b4249bd2fbfcfb7acda4e5fcef9]
+
+	bezier curves
+
+	Change-Id: I197aa3344aa89abf1892ec9b812f6054df6fd6c5
+2016-05-31  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [40256387e33b0095ff29486195f06c7041f11cd3]
+
+	parsing of simple lines, rectangles
+
+	Change-Id: Ic8705c7945719e18e438b5e568da12615e26ac4c
+
+2016-05-27  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [5084b273f9b2e4e2efec6b2f16b13263b7a0bf29]
+
+	ZMFPageSettings, page size and offsets
+
+	Change-Id: Ieaee88e6345f193b25a08c7a25dd08129917b62f
+
+2016-05-26  David Tardon  <dtardon@redhat.com>  [d541d239f655a29a5ce6a4039d370bab8b507b5d]
+
+	set up git hooks automatically
+
+	Change-Id: Ib005b68e71310ef50455746ea307c58b2ec44ec3
+
+2016-05-26  David Tardon  <dtardon@redhat.com>  [696fd24586680c8e62e1f7326832ac768b97608f]
+
+	update AUTHORS
+
+
+2016-05-21  David Tardon  <dtardon@redhat.com>  [e133e7a9cae52141396e335a211cc34199122e7a]
+
+	allow the user to determine document type
+
+
+2016-04-25  David Tardon  <dtardon@redhat.com>  [995b86bc1255c530ed3e05d49370796e4df624c6]
+
+	set up git-review
+
+
+2016-04-25  David Tardon  <dtardon@redhat.com>  [426adec98b50ebc39a1c4c41af52e9fc19e261cd]
+
+	add git hooks
+
+
+2016-03-14  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [90d8437a41cc3c13713af0e16205e31b30cb4319]
+
+	parse page dimensions
+
+
+2016-03-14  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [f6ed8d00362362e513ec85b49a5575719b4d4080]
+
+	basic zmf4 parser
+
+
+2016-03-14  David Tardon  <dtardon@redhat.com>  [073b1ca4102bde19828fbf0725700dc1e6cefa8a]
+
+	fix description
+
+
+2016-03-14  David Tardon  <dtardon@redhat.com>  [b590b44dd7231cb627b833de39d953c58dc42c3d]
+
+	librevenge-stream is not needed
+
+
+2016-03-14  David Tardon  <dtardon@redhat.com>  [a9e9d9974c8467ef3166c9bdac3be806d68681f0]
+
+	zlib is not directly needed anymore
+
+
+2016-03-14  David Tardon  <dtardon@redhat.com>  [b3f5065876fc5a913dfbc6a2fa33b95b25fbc28b]
+
+	update HACKING a bit
+
+
+2016-03-14  Aleksas Pantechovskis  <alex.pantec@gmail.com>  [96d4c25fb1c0a5cb68bbdebaae588a1cd58c42c0]
+
+	load zmf4 header
+
+
+2016-02-20  David Tardon  <dtardon@redhat.com>  [b599badb147207e5ccba64c9617ca5f75dc99b41]
+
+	make --help output more help2man-friendly
+
+
+2016-02-20  David Tardon  <dtardon@redhat.com>  [d769c9f3d175eac4d2a70618ce25cc3aeed3ddcb]
+
+	drop unused cruft
+
+
+2016-02-20  David Tardon  <dtardon@redhat.com>  [71d8507c3bf385821aefc61b6b31609ae855ba33]
+
+	drop obsolete cruft
+
+
+2016-02-20  David Tardon  <dtardon@redhat.com>  [8c55dad3044c050de923fc574c7a3f356508fceb]
+
+	update .gitignore
+
+
+2016-02-20  David Tardon  <dtardon@redhat.com>  [91b0d6d0de13b9e1c045d23b5d2a769411a50e2e]
+
+	simplify dist. and inst. of headers
+
+
+2015-03-07  David Tardon  <dtardon@redhat.com>  [54781560e837111a1add7d8f9c3d43e8b323bcf3]
+
+	add astyle target to make
+
+
+2015-03-07  Kishor Bhat  <kishorbhat@gmail.com>  [3a13f3e2577070c29b8019b3af0527845dd6377e]
+
+	add signature check
+
+
+2015-02-02  David Tardon  <dtardon@redhat.com>  [f029457fcb301545dc34f93106905e16ee20e0e6]
+
+	remove bashism
+
+
+2014-11-24  David Tardon  <dtardon@redhat.com>  [02c41d3b469aaedca7c59ccd1437a668e303d702]
+
+	add compile to .gitignore
+
+
+2014-11-24  David Tardon  <dtardon@redhat.com>  [c2c39f4b7d784b567b124b1881186714ac033604]
+
+	only export public symbols
+
+
+2014-05-25  David Tardon  <dtardon@redhat.com>  [9e769510ac10215a965058bff2c465e5940a56d1]
+
+	export API symbols
+
+
+2013-12-16  David Tardon  <dtardon@redhat.com>  [ec8b830c8ec4b55857b2b2c8d17762c54a8adaf7]
+
+	relicense to MPL 2.0
+
+	When I started this library, I copied the generators and some other
+	boilerplate code (e.g., OLE stream impl.) from libwpg / libwpd. So I
+	just used the same dual license for the rest. But that code is now gone,
+	thanks to librevenge, so there is no reason to keep LGPL 2.1+ anymore.
+
+2013-12-07  David Tardon  <dtardon@redhat.com>  [9a9ccc9c296a32e1844b1c8aa3a74d084005a135]
+
+	add zmf2raw --callgraph
+
+
+2013-11-30  David Tardon  <dtardon@redhat.com>  [35ceedbbbd8e327cf9882d1dbdf8abf022b49b45]
+
+	update astyle options
+
+
+2013-11-30  David Tardon  <dtardon@redhat.com>  [244e1644d79131bc0c65108dfff4b46048ae6911]
+
+	switch to librevenge
+
+
+2013-10-17  David Tardon  <dtardon@redhat.com>  [d2a941c03aa6b6a03c1bd17cbca38a0621faa3ad]
+
+	sort lexicographically
+
+
+2013-10-17  David Tardon  <dtardon@redhat.com>  [77353208faa3c463d1b9c91387f45e9181782dca]
+
+	rename parser files
+
+	The number marks the first version the parser handles.
+
+2013-09-21  David Tardon  <dtardon@redhat.com>  [1cc4490bc8e5d4e70aa79fbedc5b4a15a16f0e37]
+
+	use tabs, not spaces
+
+
+2013-09-21  David Tardon  <dtardon@redhat.com>  [b5ddcb049bed606f16d033e9df8509e24c544d09]
+
+	WaE: 'ZMFSVGGeneratorPrivate' defined as a struct
+
+
+2013-09-21  David Tardon  <dtardon@redhat.com>  [8664333c6ab1305f5640d5dd93e619b583672b0d]
+
+	add missing ctor definition
+
+
+2013-09-01  David Tardon  <dtardon@redhat.com>  [f76a3059093a040a897c95f346c6b1601046ebbc]
+
+	add README
+
+
+2013-09-01  David Tardon  <dtardon@redhat.com>  [f74d88846213b8166998b7a9eee6a7a11dcea02e]
+
+	split parsers by format
+
+
+2013-08-31  David Tardon  <dtardon@redhat.com>  [c91fa38c92e211c3b2d9beef05a83a8b9c82d554]
+
+	add OLE and Zip stream impl.
+
+
+2013-08-31  David Tardon  <dtardon@redhat.com>  [fde6bd801e453d41ac7f9fd6e1119b4594301b99]
+
+	add the usual utility functions and macros
+
+
+2013-08-31  David Tardon  <dtardon@redhat.com>  [379e47fa7987c631ec3d863c597b7445b43d5bcb]
+
+	wrap WPXInputStream in shared_ptr
+
+
+2013-08-31  David Tardon  <dtardon@redhat.com>  [79ed85527f1e942218dde6805059944bc680db09]
+
+	convert tabs to spaces
+
+
+2013-08-30  David Tardon  <dtardon@redhat.com>  [27460035b8cae8a23920ad033739b6e09c309244]
+
+	initial import from libwpg
+
