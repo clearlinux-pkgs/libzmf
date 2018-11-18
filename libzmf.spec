@@ -4,15 +4,15 @@
 #
 Name     : libzmf
 Version  : 0.0.2
-Release  : 1
+Release  : 2
 URL      : https://dev-www.libreoffice.org/src/libzmf-0.0.2.tar.xz
 Source0  : https://dev-www.libreoffice.org/src/libzmf-0.0.2.tar.xz
 Summary  : Library for importing and converting Zoner Draw drawings
 Group    : Development/Tools
 License  : MPL-2.0-no-copyleft-exception
-Requires: libzmf-bin
-Requires: libzmf-lib
-Requires: libzmf-license
+Requires: libzmf-bin = %{version}-%{release}
+Requires: libzmf-lib = %{version}-%{release}
+Requires: libzmf-license = %{version}-%{release}
 BuildRequires : boost-dev
 BuildRequires : doxygen
 BuildRequires : pkgconfig(cppunit)
@@ -30,7 +30,7 @@ Zoner Draw and Zebra file formats.
 %package bin
 Summary: bin components for the libzmf package.
 Group: Binaries
-Requires: libzmf-license
+Requires: libzmf-license = %{version}-%{release}
 
 %description bin
 bin components for the libzmf package.
@@ -39,9 +39,9 @@ bin components for the libzmf package.
 %package dev
 Summary: dev components for the libzmf package.
 Group: Development
-Requires: libzmf-lib
-Requires: libzmf-bin
-Provides: libzmf-devel
+Requires: libzmf-lib = %{version}-%{release}
+Requires: libzmf-bin = %{version}-%{release}
+Provides: libzmf-devel = %{version}-%{release}
 
 %description dev
 dev components for the libzmf package.
@@ -58,7 +58,7 @@ doc components for the libzmf package.
 %package lib
 Summary: lib components for the libzmf package.
 Group: Libraries
-Requires: libzmf-license
+Requires: libzmf-license = %{version}-%{release}
 
 %description lib
 lib components for the libzmf package.
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534636442
+export SOURCE_DATE_EPOCH=1542500320
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -92,10 +92,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1534636442
+export SOURCE_DATE_EPOCH=1542500320
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/libzmf
-cp COPYING %{buildroot}/usr/share/doc/libzmf/COPYING
+mkdir -p %{buildroot}/usr/share/package-licenses/libzmf
+cp COPYING %{buildroot}/usr/share/package-licenses/libzmf/COPYING
 %make_install
 
 %files
@@ -123,8 +123,5 @@ cp COPYING %{buildroot}/usr/share/doc/libzmf/COPYING
 /usr/lib64/libzmf-0.0.so.0.0.2
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/libzmf/COPYING
-/usr/share/doc/libzmf/html/BMITypes_8cpp.html
-/usr/share/doc/libzmf/html/BMITypes_8h.html
-/usr/share/doc/libzmf/html/BMITypes_8h_source.html
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/libzmf/COPYING
