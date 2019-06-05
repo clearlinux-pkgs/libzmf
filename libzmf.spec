@@ -4,7 +4,7 @@
 #
 Name     : libzmf
 Version  : 0.0.2
-Release  : 2
+Release  : 3
 URL      : https://dev-www.libreoffice.org/src/libzmf-0.0.2.tar.xz
 Source0  : https://dev-www.libreoffice.org/src/libzmf-0.0.2.tar.xz
 Summary  : Library for importing and converting Zoner Draw drawings
