@@ -4,7 +4,7 @@
 #
 Name     : libzmf
 Version  : 0.0.2
-Release  : 3
+Release  : 4
 URL      : https://dev-www.libreoffice.org/src/libzmf-0.0.2.tar.xz
 Source0  : https://dev-www.libreoffice.org/src/libzmf-0.0.2.tar.xz
 Summary  : Library for importing and converting Zoner Draw drawings
@@ -42,6 +42,7 @@ Group: Development
 Requires: libzmf-lib = %{version}-%{release}
 Requires: libzmf-bin = %{version}-%{release}
 Provides: libzmf-devel = %{version}-%{release}
+Requires: libzmf = %{version}-%{release}
 
 %description dev
 dev components for the libzmf package.
@@ -79,20 +80,28 @@ license components for the libzmf package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1542500320
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1566840207
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1542500320
+export SOURCE_DATE_EPOCH=1566840207
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libzmf
 cp COPYING %{buildroot}/usr/share/package-licenses/libzmf/COPYING
