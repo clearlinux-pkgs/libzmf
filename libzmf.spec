@@ -5,7 +5,7 @@
 #
 Name     : libzmf
 Version  : 0.0.2
-Release  : 10
+Release  : 11
 URL      : https://dev-www.libreoffice.org/src/libzmf-0.0.2.tar.xz
 Source0  : https://dev-www.libreoffice.org/src/libzmf-0.0.2.tar.xz
 Summary  : Library for importing and converting Zoner Draw drawings
@@ -90,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683822090
+export SOURCE_DATE_EPOCH=1685632103
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -122,7 +122,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1683822090
+export SOURCE_DATE_EPOCH=1685632103
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libzmf
 cp %{_builddir}/libzmf-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libzmf/9744cedce099f727b327cd9913a1fdc58a7f5599 || :
@@ -144,7 +144,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libzmf-0.0.so
 /usr/include/libzmf-0.0/libzmf/ZMFDocument.h
 /usr/include/libzmf-0.0/libzmf/libzmf.h
 /usr/lib64/libzmf-0.0.so
@@ -156,7 +155,6 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libzmf-0.0.so.0
 /V3/usr/lib64/libzmf-0.0.so.0.0.2
 /usr/lib64/libzmf-0.0.so.0
 /usr/lib64/libzmf-0.0.so.0.0.2
